@@ -1,5 +1,5 @@
-SET (CURL_INCLUDE_DIR   "/home/kiorky/minitage/dependencies/cmake-2.8/../curl-7.19/parts/part/include" CACHE PATH "curl inc)." FORCE)
-SET (CURL_LIBRARY       "/home/kiorky/minitage/dependencies/cmake-2.8/../curl-7.19/parts/part/lib" CACHE PATH "curl lib)." FORCE)
+SET (CURL_INCLUDE_DIR   "/home/kiorky/minitage/dependencies/cmake-2.8/../curl-7/parts/part/include" CACHE PATH "curl inc)." FORCE)
+SET (CURL_LIBRARY       "/home/kiorky/minitage/dependencies/cmake-2.8/../curl-7/parts/part/lib" CACHE PATH "curl lib)." FORCE)
 SET (CURL_LIBRARIES     "-lcurl -Wl,-rpath -Wl,/home/kiorky/minitage/dependencies/cmake-2.8/../curl-7.19/parts/part/lib -L/home/kiorky/minitage/dependencies/cmake-2.8/../curl-7.19/parts/part/lib" CACHE PATH "curl libs)." FORCE)
 SET (ZLIB_INCLUDE_DIR   "/home/kiorky/minitage/dependencies/cmake-2.8/../zlib-1.2/parts/part/include" CACHE PATH "zlib inc)." FORCE)
 SET (ZLIB_LIBRARY       "/home/kiorky/minitage/dependencies/cmake-2.8/../zlib-1.2/parts/part/lib" CACHE PATH "zlib lib)." FORCE)
