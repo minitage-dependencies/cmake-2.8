@@ -1,12 +1,1 @@
-SET (CURL_INCLUDE_DIR   "/data/minitage/dependencies/cmake-2.8/../curl-7/parts/part/include" CACHE PATH "curl inc)." FORCE)
-SET (CURL_LIBRARY       "/data/minitage/dependencies/cmake-2.8/../curl-7/parts/part/lib" CACHE PATH "curl lib)." FORCE)
-SET (CURL_LIBRARIES     "-lcurl -Wl,-rpath -Wl,/data/minitage/dependencies/cmake-2.8/../curl-7.19/parts/part/lib -L/data/minitage/dependencies/cmake-2.8/../curl-7.19/parts/part/lib" CACHE PATH "curl libs)." FORCE)
-SET (ZLIB_INCLUDE_DIR   "/data/minitage/dependencies/cmake-2.8/../zlib-1.2/parts/part/include" CACHE PATH "zlib inc)." FORCE)
-SET (ZLIB_LIBRARY       "/data/minitage/dependencies/cmake-2.8/../zlib-1.2/parts/part/lib" CACHE PATH "zlib lib)." FORCE)
-SET (ZLIB_LIBRARIES     "-lz -Wl,-rpath -Wl,/data/minitage/dependencies/cmake-2.8/../zlib-1.2/parts/part/lib -L/data/minitage/dependencies/cmake-2.8/../zlib-7.19/parts/part/lib" CACHE PATH "zlib libs)." FORCE)
-SET (EXPAT_INCLUDE_DIR  "/data/minitage/dependencies/cmake-2.8/../expat-2.0/parts/part/include" CACHE PATH "expat inc)." FORCE)
-SET (EXPAT_LIBRARY      "/data/minitage/dependencies/cmake-2.8/../expat-2.0/parts/part/lib" CACHE PATH "expat lib)." FORCE)
-SET (EXPAT_LIBRARIES     "-lexpat -Wl,-rpath -Wl,/data/minitage/dependencies/cmake-2.8/../expat-2.0/parts/part/lib -L/data/minitage/dependencies/cmake-2.8/../expat-2.0/parts/part/lib" CACHE PATH "expat libs)." FORCE)
-SET (CURSES_NCURSES_INCLUDE_DIR  "/data/minitage/dependencies/cmake-2.8/../ncurses-5.3/parts/part/include" CACHE PATH "expat inc)." FORCE)
-SET (CURSES_NCURSES_LIBRARY      "/data/minitage/dependencies/cmake-2.8/../ncurses-5.3/parts/part/lib" CACHE PATH "expat lib)." FORCE)
-SET (CURSES_NCURSES_LIBRARIES     "-lexpat -Wl,-rpath -Wl,/data/minitage/dependencies/cmake-2.8/../ncurses-5.6/parts/part/lib -L/data/minitage/dependencies/cmake-2.8/../ncurses-5.6/parts/part/lib" CACHE PATH "expat libs)." FORCE)
+
