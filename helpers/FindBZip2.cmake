@@ -30,19 +30,16 @@ FIND_PATH("___BZIP2_/include" NAMES bzlib.h)
 # Look for the library.
 FIND_LIBRARY("___BZIP2_/lib" NAMES bz2 libbz2) 
 
+SET(BZIP2_LIBRARIES "-L___BZIP2_/lib -Wl,-rpath -Wl,___BZIP2_/lib -lbz2")
+SET(BZIP2_INCLUDE_DIRS "___BZIP2_/include") 
 # handle the QUIETLY and REQUIRED arguments and set BZip2_FOUND to TRUE if 
 # all listed variables are TRUE
 INCLUDE(${CMAKE_CURRENT_LIST_DIR}/FindPackageHandleStandardArgs.cmake)
 FIND_PACKAGE_HANDLE_STANDARD_ARGS(BZIP2 DEFAULT_MSG BZIP2_LIBRARY BZIP2_INCLUDE_DIR)
 Set(BZip2_FOUND $BZIP2_FOUND})
 
-IF(BZip2_FOUND)
-  SET(BZIP2_LIBRARIES "-L___BZIP2_/lib -Wl,-rpath -Wl,___BZIP2_/lib")
-  SET(BZIP2_INCLUDE_DIRS "___BZIP2_/include")
-ELSE(BZip2_FOUND)
-  SET(BZIP2_LIBRARIES)
-  SET(BZIP2_INCLUDE_DIRS)
-ENDIF(BZip2_FOUND) 
+
+
 
 MARK_AS_ADVANCED(BZIP2_INCLUDE_DIR BZIP2_LIBRARIES)
 

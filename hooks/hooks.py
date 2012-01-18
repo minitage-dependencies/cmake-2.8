@@ -8,7 +8,17 @@ def h(options, buildout):
     f.write(buildout['init']['init']+"\n")
     par = {}
     par['z'] = "%s/lib" % buildout['locations']['zlib']
-    os.environ['LDFLAGS'] = (os.environ.get('LDFLAGS', '') + '-L%(z)s -Wl,-rpath -Wl,%(z)s -lz -lcurl -lexpat'%par).strip()
+    par['a'] = "%s/lib" % buildout['locations']['libarchive']
+    par['b'] = "%s/lib" % buildout['locations']['bzip2']
+    par['c'] = "%s/lib" % buildout['locations']['curl']
+    par['s'] = "%s/lib" % buildout['locations']['ssl']
+    os.environ['LDFLAGS'] = (os.environ.get('LDFLAGS', '') + (' '
+                                                              '-L%(s)s -Wl,-rpath -Wl,%(s)s '
+                                                              '-L%(c)s -Wl,-rpath -Wl,%(c)s '
+                                                              '-L%(b)s -Wl,-rpath -Wl,%(b)s '
+                                                              '-L%(a)s -Wl,-rpath -Wl,%(a)s '
+                                                              '-L%(z)s -Wl,-rpath -Wl,%(z)s '
+                                                              '-lz -lcurl -lexpat -lbz2 -larchive'%par)).strip()
     p(options, buildout)
 
 
@@ -28,6 +38,7 @@ def p(options, buildout):
         content = content.replace('___CURL_', buildout['locations']['curl'])
         content = content.replace('___LibArchive_', buildout['locations']['libarchive'])
         content = content.replace('___ZLIB_', buildout['locations']['zlib'])
+        content = content.replace('___SSL_', buildout['locations']['ssl'])
         f = open(fp, 'w')
         f.write(content)
         f.close()

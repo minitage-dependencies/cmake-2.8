@@ -34,7 +34,7 @@ MARK_AS_ADVANCED( ZLIB_LIBRARY ZLIB_INCLUDE_DIR )
 
 # Per-recommendation
 SET(ZLIB_INCLUDE_DIRS "___ZLIB_/include")
-SET(ZLIB_LIBRARIES    "-L___ZLIB_/lib -Wl,-rpath -Wl,___ZLIB_/lib")
+SET(ZLIB_LIBRARIES    "-L___ZLIB_/lib -Wl,-rpath -Wl,___ZLIB_/lib -lz")
 
 # handle the QUIETLY and REQUIRED arguments and set ZLIB_FOUND to TRUE if 
 # all listed variables are TRUE

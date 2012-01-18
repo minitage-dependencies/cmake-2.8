@@ -29,16 +29,11 @@ FIND_LIBRARY("___EXPAT_/lib" NAMES expat libexpat)
 
 # handle the QUIETLY and REQUIRED arguments and set EXPAT_FOUND to TRUE if 
 # all listed variables are TRUE
+SET(EXPAT_LIBRARIES "-L___EXPAT_/lib -Wl,-rpath -Wl,___EXPAT_/lib -lexpat")
+SET(EXPAT_INCLUDE_DIRS "___EXPAT_/include") 
 INCLUDE(FindPackageHandleStandardArgs)
 FIND_PACKAGE_HANDLE_STANDARD_ARGS(EXPAT DEFAULT_MSG EXPAT_LIBRARY EXPAT_INCLUDE_DIR)
 
-# Copy the results to the output variables.
-IF(EXPAT_FOUND)
-  SET(EXPAT_LIBRARIES "-L___EXPAT_/lib -Wl,-rpath -Wl,___EXPAT_/lib")
-  SET(EXPAT_INCLUDE_DIRS "___EXPAT_/include")
-ELSE(EXPAT_FOUND)
-  SET(EXPAT_LIBRARIES)
-  SET(EXPAT_INCLUDE_DIRS)
-ENDIF(EXPAT_FOUND)
+
 
 MARK_AS_ADVANCED(EXPAT_INCLUDE_DIR EXPAT_LIBRARY)

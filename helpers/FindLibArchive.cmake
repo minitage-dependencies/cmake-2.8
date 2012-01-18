@@ -62,12 +62,13 @@ endif()
 # (Use ${CMAKE_ROOT}/Modules instead of ${CMAKE_CURRENT_LIST_DIR} because CMake
 #  itself includes this FindLibArchive when built with an older CMake that does
 #  not provide it.  The older CMake also does not have CMAKE_CURRENT_LIST_DIR.)
+
+SET(LibArchive_LIBRARIES "-L___LibArchive_/lib -Wl,-rpath -Wl,___LibArchive_/lib -larchive")
+SET(LibArchive_INCLUDE_DIRS ${LibArchive_INCLUDE_DIR}) 
+
 include(${CMAKE_ROOT}/Modules/FindPackageHandleStandardArgs.cmake)
 find_package_handle_standard_args(LibArchive DEFAULT_MSG LibArchive_LIBRARY LibArchive_INCLUDE_DIR)
 set(LibArchive_FOUND ${LIBARCHIVE_FOUND})
 unset(LIBARCHIVE_FOUND)
 
-IF(LibArchive_FOUND)
-  SET(LibArchive_LIBRARIES "-L___LibArchive_/lib -Wl,-rpath -Wl,___LibArchive_/lib")
-  SET(LibArchive_INCLUDE_DIRS ${LibArchive_INCLUDE_DIR})
-ENDIF(LibArchive_FOUND) 
+
